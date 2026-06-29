@@ -34,10 +34,10 @@ export default function Header() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-extrabold text-primary md:text-2xl transition-colors duration-300">
+                <span className="text-lg font-extrabold text-primary md:text-xl transition-colors duration-300">
                   पोखरा कला केन्द्र
                 </span>
-                <span className="text-[0.65rem] font-bold text-secondary/80 uppercase tracking-[0.2em] hidden sm:block mt-0.5">
+                <span className="text-[0.65rem] font-bold text-secondary/80 uppercase tracking-widest hidden sm:block mt-0.5">
                   Pokhara Kala Kendra
                 </span>
               </div>
@@ -79,11 +79,7 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-slate-600 hover:text-primary focus:outline-none p-2 bg-slate-50 rounded-full transition-colors"
             >
-              {isMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -91,8 +87,9 @@ export default function Header() {
 
       {/* Mobile Nav */}
       <div
-        className={`md:hidden absolute top-20 left-0 w-full bg-white shadow-xl overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[400px] border-b border-slate-200' : 'max-h-0'
-          }`}
+        className={`md:hidden absolute top-20 left-0 w-full bg-white shadow-xl overflow-hidden transition-all duration-300 ease-in-out ${
+          isMenuOpen ? "max-h-[400px] border-b border-slate-200" : "max-h-0"
+        }`}
       >
         <div className="flex flex-col px-6 pt-4 pb-6 space-y-2">
           {navLinks.map((link) => {
@@ -102,9 +99,7 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors duration-200 ${
-                  isActive
-                    ? "text-primary"
-                    : "text-slate-700 hover:bg-slate-50 hover:text-primary"
+                  isActive ? "text-primary" : "text-slate-700 hover:bg-slate-50 hover:text-primary"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >

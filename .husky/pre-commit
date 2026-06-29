@@ -1,0 +1,5 @@
+# Run lint-staged (ESLint + Prettier on staged files)
+pnpm exec lint-staged
+
+# TypeScript type check — fails commit if there are type errors
+pnpm tsc --noEmit

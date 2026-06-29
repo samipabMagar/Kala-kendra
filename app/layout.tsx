@@ -11,7 +11,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Pokhara Kala Kendra - Cultural Dress Rental & Dance Classes",
-  description: "Rent Nepal's cultural dresses including Magar, Tharu, Rai, and join our dance classes at Pokhara Kala Kendra.",
+  description:
+    "Rent Nepal's cultural dresses including Magar, Tharu, Rai, and join our dance classes at Pokhara Kala Kendra.",
 };
 
 export default function RootLayout({
