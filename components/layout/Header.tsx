@@ -20,7 +20,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/90 backdrop-blur-xl shadow-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-primary/10 bg-background/90 backdrop-blur-xl shadow-sm">
       <Container>
         <div className="flex items-center justify-between h-20">
           {/* Logo Section */}
@@ -55,15 +55,15 @@ export default function Header() {
                   href={link.href}
                   className={`px-3 py-2 text-sm font-semibold rounded-md whitespace-nowrap transition-colors duration-200 ${
                     isActive
-                      ? "text-primary"
-                      : "text-slate-600 hover:bg-slate-50 hover:text-primary"
+                      ? "text-primary bg-primary/5"
+                      : "text-foreground/80 hover:bg-foreground/5 hover:text-primary"
                   }`}
                 >
                   {link.name}
                 </Link>
               );
             })}
-            <div className="pl-3 ml-1 border-l border-slate-200">
+            <div className="pl-3 ml-1 border-l border-foreground/10">
               <Link
                 href="/rentals"
                 className="px-5 py-2.5 rounded-full bg-primary text-white text-sm font-bold shadow-md shadow-primary/30 hover:shadow-lg hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
@@ -77,7 +77,7 @@ export default function Header() {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-slate-600 hover:text-primary focus:outline-none p-2 bg-slate-50 rounded-full transition-colors"
+              className="text-foreground/80 hover:text-primary focus:outline-none p-2 bg-foreground/5 rounded-full transition-colors"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -87,8 +87,8 @@ export default function Header() {
 
       {/* Mobile Nav — slides down below lg */}
       <div
-        className={`lg:hidden absolute top-20 left-0 w-full bg-white shadow-xl overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? "max-h-[400px] border-b border-slate-200" : "max-h-0"
+        className={`lg:hidden absolute top-20 left-0 w-full bg-background shadow-xl overflow-hidden transition-all duration-300 ease-in-out ${
+          isMenuOpen ? "max-h-[400px] border-b border-foreground/10" : "max-h-0"
         }`}
       >
         <Container>
@@ -101,8 +101,8 @@ export default function Header() {
                   href={link.href}
                   className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors duration-200 ${
                     isActive
-                      ? "text-primary"
-                      : "text-slate-700 hover:bg-slate-50 hover:text-primary"
+                      ? "text-primary bg-primary/5"
+                      : "text-foreground/80 hover:bg-foreground/5 hover:text-primary"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
