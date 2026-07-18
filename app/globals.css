@@ -2,11 +2,11 @@
 
 @theme {
   /* Background & text */
-  --color-background: #fcfdfb;
-  --color-foreground: #1a202c;
+  --color-background: #f7f9f8;
+  --color-foreground: #1a2520;
 
-  /* Primary: Deep Cultural Crimson */
-  --color-primary: #a91024;
+  /* Primary: Deep Forest Teal — premium, calm, non-red */
+  --color-primary: #0c5c6b;
   --color-primary-foreground: #ffffff;
 
   /* Secondary: Antique Gold / Champagne */
@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: #fcfdfb;
-  color: #1a202c;
+  background-color: #f7f9f8;
+  color: #1a2520;
   font-family: var(--font-poppins), Arial, sans-serif;
 }

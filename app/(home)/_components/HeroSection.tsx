@@ -42,7 +42,7 @@ const slides = [
 
 export default function HeroSection() {
   return (
-    <div className="relative h-[92vh] min-h-[600px] w-full overflow-hidden">
+    <div className="relative h-[calc(100vh-5rem)] min-h-[560px] w-full overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
@@ -61,20 +61,22 @@ export default function HeroSection() {
               className="object-cover object-center"
             />
 
-            <div className="absolute inset-0 bg-slate-800/30" />
+            {/* Neutral gradient — preserves photo colors, darkens bottom for text clarity */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/30 to-black/60" />
 
             <div className="absolute inset-0 flex items-center justify-center text-center">
               <Container>
                 <div className="mx-auto max-w-2xl flex flex-col items-center gap-5 px-4">
-                  <span className="inline-block rounded-full bg-white/20 border border-white/40 px-5 py-1.5 text-xs font-bold uppercase tracking-widest text-white shadow-sm">
+                  {/* Tag pill */}
+                  <span className="inline-block rounded-full bg-white/15 backdrop-blur-sm border border-white/50 px-5 py-1.5 text-xs font-bold uppercase tracking-widest text-white">
                     {slide.tag}
                   </span>
 
-                  <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl drop-shadow-md">
+                  <h1 className="text-4xl font-extrabold leading-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl">
                     {slide.title}
                   </h1>
 
-                  <p className="max-w-lg text-base leading-relaxed text-white drop-shadow-md md:text-lg">
+                  <p className="max-w-lg text-base leading-relaxed text-white/95 drop-shadow md:text-lg">
                     {slide.subtitle}
                   </p>
 

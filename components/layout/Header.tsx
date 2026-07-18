@@ -20,7 +20,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-primary/10 bg-background/90 backdrop-blur-xl shadow-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-white/95 backdrop-blur-xl shadow-sm">
       <Container>
         <div className="flex items-center justify-between h-20">
           {/* Logo Section */}
@@ -46,18 +46,16 @@ export default function Header() {
           </div>
 
           {/* Desktop Nav — only shows at lg+ (1024px) to prevent squishing */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-2 text-sm font-semibold rounded-md whitespace-nowrap transition-colors duration-200 ${
-                    isActive
-                      ? "text-primary bg-primary/5"
-                      : "text-foreground/80 hover:bg-foreground/5 hover:text-primary"
-                  }`}
+                  className={`relative  text-sm font-semibold whitespace-nowrap transition-colors duration-200
+                    after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:bg-primary after:transition-all after:duration-300 hover:after:w-full
+                    ${isActive ? "text-primary" : "text-foreground/65 hover:text-primary"}`}
                 >
                   {link.name}
                 </Link>
@@ -99,11 +97,9 @@ export default function Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors duration-200 ${
-                    isActive
-                      ? "text-primary bg-primary/5"
-                      : "text-foreground/80 hover:bg-foreground/5 hover:text-primary"
-                  }`}
+                  className={`relative block px-4 py-3 text-base font-semibold transition-colors duration-200
+                    after:absolute after:bottom-1 after:left-4 after:h-0.5 after:w-0 after:rounded-full after:bg-primary after:transition-all after:duration-300 hover:after:w-8
+                    ${isActive ? "text-primary" : "text-foreground/65 hover:text-primary"}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
