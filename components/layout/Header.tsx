@@ -38,7 +38,7 @@ export default function Header() {
                 <span className="text-base font-extrabold text-primary transition-colors duration-300">
                   पोखरा कला केन्द्र
                 </span>
-                <span className="text-[0.65rem] font-bold text-secondary/80 uppercase tracking-widest hidden sm:block mt-0.5">
+                <span className="text-[0.65rem] font-bold text-secondary uppercase tracking-widest hidden sm:block mt-0.5">
                   Pokhara Kala Kendra
                 </span>
               </div>

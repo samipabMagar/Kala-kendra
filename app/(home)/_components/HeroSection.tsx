@@ -42,7 +42,7 @@ const slides = [
 
 export default function HeroSection() {
   return (
-    <div className="relative h-[calc(100vh-5rem)] min-h-[560px] w-full overflow-hidden">
+    <div className="relative h-[50vh] min-h-[320px] lg:h-[calc(100vh-5rem)] lg:min-h-[560px] w-full overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
@@ -83,7 +83,7 @@ export default function HeroSection() {
                   <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
                     <Link
                       href={slide.cta.href}
-                      className="rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-white shadow-lg  transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 active:scale-95"
+                      className="px-8 py-3.5 rounded-full bg-primary text-white font-bold tracking-wide shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300"
                     >
                       {slide.cta.label}
                     </Link>
