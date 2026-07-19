@@ -68,29 +68,29 @@ export default function HeroSection() {
               <Container>
                 <div className="mx-auto max-w-2xl flex flex-col items-center gap-5 px-4">
                   {/* Tag pill */}
-                  <span className="inline-block rounded-full bg-white/15 backdrop-blur-sm border border-white/50 px-5 py-1.5 text-xs font-bold uppercase tracking-widest text-white">
+                  <span className="inline-block rounded-full bg-white/15 backdrop-blur-sm border border-white/50 px-4 py-1 text-[9px] font-bold uppercase tracking-widest text-white md:px-5 md:py-1.5 md:text-xs">
                     {slide.tag}
                   </span>
 
-                  <h1 className="text-4xl font-extrabold leading-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl">
+                  <h1 className="text-xl font-extrabold leading-tight text-white drop-shadow-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                     {slide.title}
                   </h1>
 
-                  <p className="max-w-lg text-base leading-relaxed text-white/95 drop-shadow md:text-lg">
+                  <p className="max-w-lg text-sm leading-relaxed text-white/90 drop-shadow md:text-base lg:text-lg">
                     {slide.subtitle}
                   </p>
 
                   <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
                     <Link
                       href={slide.cta.href}
-                      className="px-8 py-3.5 rounded-full bg-primary text-white font-bold tracking-wide shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300"
+                      className="px-6 py-3 text-[13px] rounded-full bg-primary text-white font-bold tracking-wide shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300 md:px-8 md:py-3.5"
                     >
                       {slide.cta.label}
                     </Link>
 
                     <Link
                       href={slide.ctaSecondary.href}
-                      className="rounded-full bg-white/20 border border-white/60 px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:bg-white/30 active:scale-95 shadow-sm"
+                      className="rounded-full bg-white/20 border border-white/60 px-5 py-3 text-[13px] font-bold text-white transition-all duration-300 hover:bg-white/30 active:scale-95 shadow-sm md:px-7 md:py-3.5 md:text-sm"
                     >
                       {slide.ctaSecondary.label}
                     </Link>
