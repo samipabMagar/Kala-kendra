@@ -1,13 +1,7 @@
 import { Fragment } from "react";
 import Container from "@/components/ui/Container";
-import {
-  PhoneIcon,
-  EmailIcon,
-  LocationIcon,
-  FacebookIcon,
-  InstagramIcon,
-  YouTubeIcon,
-} from "@/components/ui/icons";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { FacebookIcon, InstagramIcon, YouTubeIcon } from "@/components/ui/icons";
 
 const Divider = () => (
   <span className="inline-block w-px h-3 bg-foreground/20" aria-hidden="true" />
@@ -28,7 +22,7 @@ export default function TopHeader() {
             href="tel:+9779800000000"
             className="flex items-center gap-1.5 font-medium hover:text-primary transition-colors"
           >
-            <PhoneIcon size={13} stroke="#c8102e" />
+            <Phone size={13} color="#c8102e" strokeWidth={2.5} />
             <span>+977 980-0000000</span>
           </a>
 
@@ -56,7 +50,7 @@ export default function TopHeader() {
               href="tel:+9779800000000"
               className="flex items-center gap-1.5 hover:text-primary transition-colors pr-3"
             >
-              <PhoneIcon size={13} stroke="#c8102e" />
+              <Phone size={13} color="#c8102e" strokeWidth={2.5} />
               <span className="font-medium tracking-wide">+977 980-0000000</span>
             </a>
 
@@ -66,14 +60,14 @@ export default function TopHeader() {
               href="mailto:info@pokharakalakendra.com"
               className="flex items-center gap-1.5 hover:text-primary transition-colors px-3"
             >
-              <EmailIcon size={13} stroke="#c8102e" />
+              <Mail size={13} color="#c8102e" strokeWidth={2.5} />
               <span className="font-medium tracking-wide">info@pokharakalakendra.com</span>
             </a>
 
             <Divider />
 
             <div className="flex items-center gap-1.5 text-foreground/60 pl-3">
-              <LocationIcon size={13} stroke="#c8102e" />
+              <MapPin size={13} color="#c8102e" strokeWidth={2.5} />
               <span className="font-medium tracking-wide">Pokhara, Nepal</span>
             </div>
           </div>
