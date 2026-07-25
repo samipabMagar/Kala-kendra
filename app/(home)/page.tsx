@@ -1,6 +1,7 @@
 import HeroSection from "./_components/HeroSection";
 import StatsSection from "./_components/StatsSection";
 import FeaturedRentals from "./_components/FeaturedRentals";
+import OurHeritage from "./_components/OurHeritage";
 
 export default function HomePage() {
   return (
@@ -8,6 +9,7 @@ export default function HomePage() {
       <HeroSection />
       <StatsSection />
       <FeaturedRentals />
+      <OurHeritage />
     </main>
   );
 }
