@@ -36,7 +36,7 @@ const rentals = [
 
 export default function FeaturedRentals() {
   return (
-    <section className="py-20 md:py-24 bg-[#fdf8f2] relative overflow-hidden">
+    <section className="py-14 md:py-24 bg-[#fdf8f2] relative overflow-hidden">
       <Container>
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10 md:mb-12">

@@ -5,7 +5,7 @@ import Container from "@/components/ui/Container";
 
 export default function OurHeritage() {
   const baseCardClass =
-    "absolute w-[45%] max-w-[160px] md:max-w-[240px] rounded-xl md:rounded-[2rem] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] origin-bottom hover:!scale-110 hover:!z-50";
+    "absolute w-[45%] max-w-[160px] md:max-w-[240px] rounded-xl md:rounded-[2rem] overflow-hidden transition-all duration-500 ease-out origin-bottom hover:!scale-110 hover:!z-50";
 
   return (
     <section className="relative py-10 md:py-20 overflow-hidden bg-white">
