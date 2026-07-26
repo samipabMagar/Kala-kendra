@@ -4,6 +4,8 @@ import FeaturedRentals from "./_components/FeaturedRentals";
 import OurHeritage from "./_components/OurHeritage";
 import ServicesOverview from "./_components/ServicesOverview";
 import Testimonials from "./_components/Testimonials";
+import FAQ from "./_components/FAQ";
+import CTA from "./_components/CTA";
 
 export default function HomePage() {
   return (
@@ -14,6 +16,8 @@ export default function HomePage() {
       <ServicesOverview />
       <OurHeritage />
       <Testimonials />
+      <FAQ />
+      <CTA />
     </main>
   );
 }
