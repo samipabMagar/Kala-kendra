@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import Container from "@/components/ui/Container";
+import { siteConfig } from "@/config/site";
 
 export default function CTA() {
   return (
@@ -57,7 +58,7 @@ export default function CTA() {
                 />
               </Link>
               <a
-                href="tel:+977-000-0000"
+                href={siteConfig.contact.phone.link}
                 className="inline-flex items-center gap-2 border border-white/20 text-white font-semibold px-6 py-3 rounded-full text-sm transition-all duration-300 hover:bg-white/10 hover:border-white/40"
               >
                 <Phone size={14} />
