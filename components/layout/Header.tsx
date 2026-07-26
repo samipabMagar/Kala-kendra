@@ -13,8 +13,9 @@ export default function Header() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Rentals", href: "/rentals" },
+    { name: "Costume Rental", href: "/costume-rental" },
     { name: "Dance Classes", href: "/classes" },
+    { name: "Gallery", href: "/gallery" },
     { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -63,7 +64,7 @@ export default function Header() {
             })}
             <div className="pl-3 ml-1 border-l border-foreground/10">
               <Link
-                href="/rentals"
+                href="/costume-rental"
                 className="px-5 py-2.5 rounded-full bg-primary text-white text-sm font-bold shadow-md shadow-primary/30 hover:shadow-lg hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
               >
                 Book Now
@@ -107,7 +108,7 @@ export default function Header() {
               );
             })}
             <Link
-              href="/rentals"
+              href="/costume-rental"
               onClick={() => setIsMenuOpen(false)}
               className="mt-2 w-full text-center px-6 py-4 rounded-xl bg-primary text-white font-bold tracking-wide shadow-md shadow-primary/30 hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
             >

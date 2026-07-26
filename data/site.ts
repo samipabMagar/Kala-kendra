@@ -6,14 +6,15 @@ export const siteConfig = {
     "Preserving and celebrating the vibrant cultural heritage of Nepal through authentic traditional attire and highly curated classical dance classes.",
   contact: {
     phone: {
-      display: "+977 9856035168",
-      link: "tel:+9779856035168",
+      display: "+977 9846067655",
+      link: "tel:+9779846067655",
     },
     email: "rahulmagar1324@gmail.com",
     address: {
       line1: "Siddhartha Chowk, Pokhara",
       line2: "Gandaki Province, Nepal",
       short: "Siddhartha Chowk, Pokhara",
+      mapLink: "https://www.google.com/maps/place/Siddhartha+Chowk,+Pokhara",
     },
   },
   socialLinks: [

@@ -1,15 +1,10 @@
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import Container from "@/components/ui/Container";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/data/site";
 
 export default function CTA() {
   return (
-    /*
-      Compact horizontal banner CTA — not a full-screen section.
-      Dark crimson background with a subtle radial glow and a ghosted
-      Devanagari watermark for cultural texture.
-    */
     <section className="py-12 md:py-16 bg-white">
       <Container>
         <div

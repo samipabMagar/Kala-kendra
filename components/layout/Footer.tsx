@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUp, MapPin, Phone, Mail } from "lucide-react";
 import Container from "@/components/ui/Container";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/data/site";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -76,13 +76,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/rentals" className="hover:text-primary transition-colors">
-                  Costume Rentals
+                <Link href="/costume-rental" className="hover:text-primary transition-colors">
+                  Costume Rental
                 </Link>
               </li>
               <li>
                 <Link href="/classes" className="hover:text-primary transition-colors">
                   Dance Classes
+                </Link>
+              </li>
+              <li>
+                <Link href="/gallery" className="hover:text-primary transition-colors">
+                  Gallery
                 </Link>
               </li>
               <li>

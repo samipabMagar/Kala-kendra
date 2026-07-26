@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Container from "@/components/ui/Container";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/data/site";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const Divider = () => (
