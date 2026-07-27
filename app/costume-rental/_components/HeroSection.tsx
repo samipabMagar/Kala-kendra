@@ -17,14 +17,8 @@ export default function HeroSection() {
         className="object-cover object-center"
       />
 
-      {/* Gradient: left opaque → right transparent, blending text into the image */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(20,5,5,0.88) 0%, rgba(20,5,5,0.70) 40%, rgba(20,5,5,0.30) 65%, transparent 85%)",
-        }}
-      />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
 
       {/* Text content — left-aligned, vertically centered */}
       <div className="absolute inset-0 flex items-center">

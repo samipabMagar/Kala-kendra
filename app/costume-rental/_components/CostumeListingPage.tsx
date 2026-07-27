@@ -11,36 +11,46 @@ function CostumeCard({ costume }: { costume: (typeof costumes)[0] }) {
   return (
     <Link
       href={`/costume-rental/${costume.id}`}
-      className="group relative block aspect-[3/4] overflow-hidden rounded-2xl cursor-pointer bg-foreground/5"
+      className="group relative flex flex-col overflow-hidden rounded-2xl cursor-pointer bg-white border border-foreground/8 md:border-0 md:bg-transparent hover:shadow-lg hover:shadow-black/8 md:hover:shadow-none hover:-translate-y-1 md:hover:translate-y-0 transition-all duration-300"
     >
-      <Image
-        src={costume.image}
-        alt={costume.name}
-        fill
-        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-      />
+      <div className="relative aspect-[3/4] overflow-hidden md:rounded-2xl">
+        <Image
+          src={costume.image}
+          alt={costume.name}
+          fill
+          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+        />
 
-      <span className="absolute top-3 left-3 bg-white/85 backdrop-blur-sm text-foreground text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">
-        {costume.ethnicity}
-      </span>
+        <span className="absolute top-3 left-3 bg-secondary text-secondary-foreground text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">
+          {costume.dress}
+        </span>
 
-      <span className="absolute top-3 right-3 bg-primary/90 text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">
-        {costume.dress}
-      </span>
-
-      <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
-        <div className="h-14 bg-gradient-to-t from-black/85 to-transparent" />
-        <div className="bg-black/85 backdrop-blur-sm px-4 pb-5 pt-2 flex items-center justify-between gap-3">
-          <div>
-            <p className="text-white font-bold text-sm leading-tight">{costume.name}</p>
-            <p className="text-white/50 text-[10px] font-medium mt-0.5 uppercase tracking-widest">
-              {costume.dress} · {costume.ethnicity}
-            </p>
+        {/* Desktop: hover reveal tray slides up from bottom */}
+        <div className="hidden md:block absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+          <div className="h-14 bg-gradient-to-t from-black/85 to-transparent" />
+          <div className="bg-black/85 backdrop-blur-sm px-4 pb-5 pt-2 flex items-center justify-between gap-3">
+            <div>
+              <p className="text-white font-bold text-sm leading-tight">{costume.name}</p>
+              <p className="text-white/50 text-[10px] font-medium mt-0.5 uppercase tracking-widest">
+                {costume.dress} · {costume.ethnicity}
+              </p>
+            </div>
+            <span className="shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+              <ArrowRight size={14} />
+            </span>
           </div>
-          <span className="shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
-            <ArrowRight size={14} />
-          </span>
         </div>
+      </div>
+
+      {/* Mobile: always visible info strip */}
+      <div className="p-3.5 flex items-center justify-between gap-2 md:hidden">
+        <div className="min-w-0">
+          <p className="font-bold text-foreground text-sm leading-tight truncate">{costume.name}</p>
+          <p className="text-foreground/45 text-[11px] font-medium mt-0.5">{costume.ethnicity}</p>
+        </div>
+        <span className="shrink-0 w-7 h-7 rounded-full bg-foreground/5 flex items-center justify-center text-foreground/40">
+          <ArrowRight size={12} />
+        </span>
       </div>
     </Link>
   );
@@ -115,7 +125,7 @@ export default function CostumeListingPage() {
               )}
             </div>
 
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex lg:flex-wrap items-center gap-2 overflow-x-auto lg:overflow-visible scrollbar-hide">
               <span className="text-[10px] font-bold text-foreground/35 uppercase tracking-widest pr-1">
                 Dress:
               </span>
@@ -123,7 +133,7 @@ export default function CostumeListingPage() {
                 <button
                   key={d}
                   onClick={() => setDress(d)}
-                  className={`cursor-pointer px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 ${
+                  className={`shrink-0 cursor-pointer px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 ${
                     activeDress === d
                       ? "bg-primary text-white"
                       : "bg-foreground/5 text-foreground/65 hover:bg-foreground/10"
