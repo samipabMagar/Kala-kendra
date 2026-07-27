@@ -17,7 +17,7 @@ const slides = [
     title: "Wear the Pride of Nepal's Culture",
     subtitle:
       "Rent authentic Magar, Tharu, Rai, Gurung and many more dresses for events, ceremonies, and stage performances.",
-    cta: { label: "Browse Rentals", href: "/rentals" },
+    cta: { label: "Browse Rentals", href: "/costume-rental" },
     ctaSecondary: { label: "Learn More", href: "/about" },
   },
   {
@@ -35,7 +35,7 @@ const slides = [
     title: "Celebrate Every Occasion in Style",
     subtitle:
       "From weddings to school performances, we have the perfect traditional costume for every moment.",
-    cta: { label: "Book Now", href: "/rentals" },
+    cta: { label: "Book Now", href: "/costume-rental" },
     ctaSecondary: { label: "Contact Us", href: "/contact" },
   },
 ];

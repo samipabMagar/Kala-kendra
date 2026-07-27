@@ -9,28 +9,28 @@ const rentals = [
     title: "Magar Traditional",
     category: "Costume Rental",
     image: "/hero1.jpg",
-    href: "/rentals/magar",
+    href: "/costume-rental/magar",
   },
   {
     id: "gurung",
     title: "Gurung Attire",
     category: "Costume Rental",
     image: "/hero2.jpg",
-    href: "/rentals/gurung",
+    href: "/costume-rental/gurung",
   },
   {
     id: "tharu",
     title: "Tharu Cultural Dress",
     category: "Costume Rental",
     image: "/hero3.jpg",
-    href: "/rentals/tharu",
+    href: "/costume-rental/tharu",
   },
   {
     id: "bridal",
     title: "Bridal Collection",
     category: "Occasion Wear",
     image: "/hero1.jpg",
-    href: "/rentals/bridal",
+    href: "/costume-rental/bridal",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function FeaturedRentals() {
             </p>
           </div>
           <Link
-            href="/rentals"
+            href="/costume-rental"
             className="group flex items-center gap-3 px-6 py-3.5 rounded-full border-2 border-foreground/10 hover:border-primary hover:bg-primary text-foreground hover:text-white transition-all duration-300 font-semibold shrink-0"
           >
             Explore Collection

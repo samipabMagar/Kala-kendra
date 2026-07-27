@@ -9,7 +9,7 @@ const services = [
     description:
       "Authentic Magar, Gurung, Tharu, and Newari attire for cultural programs, school events, and dance competitions.",
     image: "/hero1.jpg",
-    href: "/rentals",
+    href: "/costume-rental",
   },
   {
     number: "02",
@@ -25,7 +25,7 @@ const services = [
     description:
       "Full costume planning for schools, colleges, and cultural organizations. We handle the wardrobe, you own the stage.",
     image: "/hero3.jpg",
-    href: "/rentals",
+    href: "/costume-rental",
   },
 ];
 
