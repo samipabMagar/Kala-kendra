@@ -41,3 +41,23 @@ export const homepageCTA: InlineCTAProps = {
     },
   ],
 };
+
+export const aboutCTA: InlineCTAProps = {
+  label: "Join Our Legacy",
+  title: "Experience the rhythm.",
+  highlight: "Wear the tradition.",
+  buttons: [
+    {
+      label: "Contact Us",
+      href: "/contact",
+      variant: "primary",
+      icon: "arrow",
+    },
+    {
+      label: "View Gallery",
+      href: "/gallery",
+      variant: "outline",
+      icon: "arrow",
+    },
+  ],
+};
